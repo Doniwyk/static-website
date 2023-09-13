@@ -15,17 +15,19 @@ body {
 }
 
 .navbar {
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     width: 95%;
     background-color: #F8F0E5;
-    border-bottom: solid 3px #0F2C59;
+    border-bottom: solid 3px #333;
     border-radius: 20px 20px 0 0;
     z-index: 2;
     position: fixed;
+    font-weight: 500;
+    font-size: 1.3rem;
 }
 
 .navbar ul {
@@ -40,6 +42,11 @@ body {
 .navbar a {
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: pink; 
 }
 
 .container {
@@ -50,7 +57,7 @@ body {
     scroll-behavior: smooth;
     scrollbar-width: none;
     border-radius: 20px;
-    outline: solid 3px #0F2C59;
+    outline: solid 3px #333;
 }
 
 .container::-webkit-scrollbar {
@@ -115,7 +122,7 @@ section {
 }
 
 .description {
-    width: 50%;
+    width: 70%;
     padding-top: 7px;
     font-size: 20px; 
     font-weight: 100;
@@ -125,20 +132,21 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: column; */
 }
 
 .contact-header {
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+    margin-top: 10px; 
+    font-size: 20px; 
+    font-weight: bold;
+    color: #333; 
 }
-
 .contact-form {
     width: 75%;
     max-width: 50%;
-    padding: 100px;
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
+
+    border-radius: 20px;
 }
 
 .form-group {
@@ -147,8 +155,8 @@ section {
 }
 
 label {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
     margin-bottom: 5px;
 }
 
@@ -163,20 +171,30 @@ button {
     width: 100%;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #0F2C59;
+    background-color: #333;
     color: #fff;
 }
 
-.contact-form {
-    display: flex; 
-    align-items: center; 
+.contact-form input, .contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.5);
+
 }
 
-.contact-form input, .contact-form textarea {
-    background-color: rgba(255, 255, 255, 0.6);
+.contact-form {
+    display: flex;
+    align-items: center;
+
+    .form-image {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .form-content {
+        flex: 2;
+    }
 }
 
 .form-image {
@@ -185,11 +203,6 @@ button {
 }
 
 .form-image img {
-    max-width: 100%;
-    height: auto;
-
-}
-
-.form-content {
-    flex: 2; /* Makes the form content take up 50% of the container */
+    max-width: 70%;
+    height: auto
 }
